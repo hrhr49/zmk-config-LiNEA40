@@ -65,7 +65,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,
+            //スクロール方向を逆転,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -171,10 +171,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E               &kp R    &kp T                                              &kp Y        &kp U  &kp I                &kp O            &kp P
-&mt LCTRL A       &kp S         &kp D               &kp F    &kp G                                              &kp H        &kp J  &kp K                &kp L            &lt 4 MINUS
-&mt LEFT_SHIFT Z  &kp X         &kp C               &kp V    &kp B                                              &kp N        &kp M  &kp COMMA            &kp DOT          &mt RIGHT_SHIFT ENTER
-&mt LCTRL ESC     &kp LEFT_WIN  &mt LEFT_ALT GRAVE  &kp INS  &lt 6 LANG_HANJA  &lt 2 LANG_HANGEUL    &lt 2 TAB  &lt 3 SPACE         &lt 5 RIGHT_BRACKET  &lt 7 BACKSLASH  &mt RIGHT_SHIFT SLASH
+&kp Q             &kp W             &kp E               &kp R    &kp T                                              &kp Y        &kp U  &kp I                &kp O            &kp P
+&mt LCTRL A       &mt LCTRL S       &kp D               &kp F    &kp G                                              &kp H        &kp J  &kp K                &lt 6 L          &lt 4 MINUS
+&mt LEFT_SHIFT Z  &mt LEFT_SHIFT X  &kp C               &kp V    &kp B                                              &kp N        &kp M  &kp COMMA            &kp DOT          &mt RIGHT_SHIFT ENTER
+&mt LCTRL ESC     &kp LEFT_WIN      &mt LEFT_ALT GRAVE  &kp INS  &lt 6 LANG_HANJA  &lt 2 LANG_HANGEUL    &lt 2 TAB  &lt 3 SPACE         &lt 5 RIGHT_BRACKET  &lt 7 BACKSLASH  &mt RIGHT_SHIFT SLASH
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
