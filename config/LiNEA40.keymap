@@ -65,7 +65,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,,,,,
+            //スクロール方向を逆転,,,,,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -186,10 +186,10 @@
 
         MARK {
             bindings = <
-&kp EXCLAMATION  &kp AT  &kp HASH   &kp DOLLAR  &kp PERCENT                    &kp CARET         &kp AMPERSAND  &kp ASTERISK           &kp LEFT_PARENTHESIS  &kp EQUAL
-&trans           &trans  &kp LANG2  &kp LANG1   &trans                         &kp SEMICOLON     &kp LS(LBKT)   &kp RIGHT_BRACKET      &kp BACKSLASH         &kp LBKT
-&trans           &trans  &trans     &trans      &trans                         &kp SINGLE_QUOTE  &kp INT3       &kp LS(RIGHT_BRACKET)  &kp LS(BACKSLASH)     &kp LS(INT1)
-&trans           &trans  &trans     &trans      &trans       &trans    &trans  &trans                           &kp ASTERISK           &kp LEFT_PARENTHESIS  &kp LS(QUESTION)
+&kp EXCLAMATION  &kp AT      &kp HASH   &kp DOLLAR  &kp PERCENT                    &kp CARET         &kp AMPERSAND  &kp ASTERISK           &kp LEFT_PARENTHESIS  &kp EQUAL
+&trans           &kp ESCAPE  &kp LANG2  &kp LANG1   &trans                         &kp SEMICOLON     &kp LS(LBKT)   &kp RIGHT_BRACKET      &kp BACKSLASH         &kp LBKT
+&trans           &trans      &trans     &trans      &trans                         &kp SINGLE_QUOTE  &kp INT3       &kp LS(RIGHT_BRACKET)  &kp LS(BACKSLASH)     &kp LS(INT1)
+&trans           &trans      &trans     &trans      &trans       &trans    &trans  &trans                           &kp ASTERISK           &kp LEFT_PARENTHESIS  &kp LS(QUESTION)
             >;
 
             sensor-bindings = <&re_kp C_VOLUME_DOWN C_VOLUME_UP>;
@@ -208,10 +208,10 @@
 
         FUNCTION {
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4   &kp F5                     &trans  &trans    &kp PAGE_UP    &trans   &trans
-&kp F6  &kp F7  &kp F8  &kp F9   &kp F10                    &trans  &kp HOME  &kp PAGE_DOWN  &kp END  &trans
-&trans  &trans  &trans  &kp F11  &kp F12                    &trans  &trans    &trans         &trans   &trans
-&trans  &trans  &trans  &trans   &trans   &trans    &trans  &trans            &trans         &trans   &trans
+&kp F1  &kp F2  &kp F3  &kp F4   &kp F5                     &trans  &trans      &kp PAGE_UP    &trans   &trans
+&kp F6  &kp F7  &kp F8  &kp F9   &kp F10                    &trans  &kp HOME    &kp PAGE_DOWN  &kp END  &trans
+&trans  &trans  &trans  &kp F11  &kp F12                    &trans  &kp C_MUTE  &trans         &trans   &trans
+&trans  &trans  &trans  &trans   &trans   &trans    &trans  &trans              &trans         &trans   &trans
             >;
 
             sensor-bindings = <&re_kp C_VOLUME_DOWN C_VOLUME_UP>;
@@ -219,19 +219,19 @@
 
         CURSOR {
             bindings = <
-&kp ESCAPE  &trans  &trans      &trans  &trans                    &trans         &kp HOME        &kp UP_ARROW    &kp END    &trans
-&trans      &trans  &kp DELETE  &trans  &trans                    &kp BACKSPACE  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &trans
-&trans      &trans  &trans      &trans  &trans                    &trans         &trans          &trans          &trans     &trans
-&trans      &trans  &trans      &trans  &trans  &trans    &trans  &trans                         &trans          &trans     &trans
+&kp ESCAPE        &trans  &trans      &trans  &trans                    &trans         &kp HOME        &kp UP_ARROW    &kp END    &trans
+&mt LCTRL ESCAPE  &trans  &kp DELETE  &trans  &trans                    &kp BACKSPACE  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &trans
+&trans            &trans  &trans      &trans  &trans                    &trans         &trans          &trans          &trans     &trans
+&trans            &trans  &trans      &trans  &trans  &trans    &trans  &trans                         &trans          &trans     &trans
             >;
         };
 
         CLICK {
             bindings = <
-&kp ESCAPE  &trans          &msc SCRL_UP    &trans           &trans                    &trans    &trans    &trans    &trans  &trans
-&trans      &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &trans                    &mkp MB3  &mkp MB1  &mkp MB2  &trans  &kp TAB
-&trans      &trans          &trans          &trans           &trans                    &trans    &mkp MB4  &mkp MB5  &trans  &trans
-&trans      &trans          &trans          &trans           &trans  &trans    &trans  &trans              &trans    &trans  &trans
+&kp ESCAPE        &trans          &msc SCRL_UP    &trans           &trans                    &trans    &trans    &trans    &trans  &trans
+&mt LCTRL ESCAPE  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_RIGHT  &trans                    &mkp MB3  &mkp MB1  &mkp MB2  &trans  &kp TAB
+&trans            &trans          &trans          &trans           &trans                    &trans    &mkp MB4  &mkp MB5  &trans  &trans
+&trans            &trans          &trans          &trans           &trans  &trans    &trans  &trans              &trans    &trans  &trans
             >;
         };
 
