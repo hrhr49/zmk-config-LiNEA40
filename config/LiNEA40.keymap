@@ -65,7 +65,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,,,,,,,,,,
+            //スクロール方向を逆転,,,,,,,,,,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
@@ -94,10 +94,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W               &kp E         &kp R    &kp T                                              &kp Y        &kp U  &kp I                &kp O            &kp P
-&mt LCTRL A       &mt LCTRL S         &kp D         &kp F    &kp G                                              &kp H        &kp J  &kp K                &lt 6 L          &lt 5 MINUS
-&mt LEFT_SHIFT Z  &mt LEFT_SHIFT X    &kp C         &kp V    &kp B                                              &kp N        &kp M  &kp COMMA            &kp DOT          &mt RIGHT_SHIFT ENTER
-&mt LCTRL ESC     &mt LEFT_ALT GRAVE  &kp LEFT_WIN  &kp INS  &lt 2 LANG_HANJA  &lt 2 LANG_HANGEUL    &lt 2 TAB  &lt 3 SPACE         &lt 4 RIGHT_BRACKET  &lt 7 BACKSLASH  &mt RIGHT_SHIFT SLASH
+&kp Q             &kp W             &kp E         &kp R  &kp T                                              &kp Y             &kp U  &kp I                &kp O            &kp P
+&mt LCTRL A       &mt LCTRL S       &kp D         &kp F  &kp G                                              &kp H             &kp J  &kp K                &lt 6 L          &lt 5 MINUS
+&mt LEFT_SHIFT Z  &mt LEFT_SHIFT X  &kp C         &kp V  &kp B                                              &kp N             &kp M  &kp COMMA            &kp DOT          &mt RIGHT_SHIFT ENTER
+&mt LCTRL ESC     &kp LEFT_ALT      &kp LEFT_WIN  &none  &lt 2 LANG_HANJA  &lt 2 LANG2    &lt 2 LANGUAGE_1  &lt 8 LANGUAGE_1         &lt 4 RIGHT_BRACKET  &lt 7 BACKSLASH  &mt RIGHT_SHIFT SLASH
             >;
 
             sensor-bindings = <&mouse_scrl SCRL_DOWN SCRL_UP>;
@@ -125,21 +125,19 @@
 
         NUMBER {
             bindings = <
-&trans  &kp N7  &kp N8   &kp N9        &kp KP_MULTIPLY                          &kp KP_DIVIDE  &kp N7        &kp N8        &kp N9        &kp KP_MULTIPLY
-&trans  &kp N4  &kp N5   &kp N6        &kp KP_MINUS                             &kp N0         &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp KP_MINUS
-&trans  &kp N1  &kp N2   &kp N3        &kp KP_PLUS                              &kp N0         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_PLUS
-&kp N0  &kp N0  &kp DOT  &kp KP_EQUAL  &kp DOT          &kp KP_ENTER    &kp N0  &kp N0                       &kp KP_DOT    &kp KP_EQUAL  &kp KP_ENTER
+&kp N1  &kp N2  &kp N3  &kp N4  &kp N5                    &kp N6  &kp N7  &kp N8  &kp N9  &kp N0
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans          &trans  &trans  &trans
             >;
-
-            sensor-bindings = <&inc_dec_kp DOWN_ARROW UP_ARROW>;
         };
 
         FUNCTION {
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4   &kp F5                     &trans  &trans      &kp PAGE_UP    &trans   &trans
-&kp F6  &kp F7  &kp F8  &kp F9   &kp F10                    &trans  &kp HOME    &kp PAGE_DOWN  &kp END  &trans
-&trans  &trans  &trans  &kp F11  &kp F12                    &trans  &kp C_MUTE  &trans         &trans   &trans
-&trans  &trans  &trans  &trans   &trans   &trans    &trans  &trans              &trans         &trans   &trans
+&kp F1  &kp F2  &kp F3  &kp F4  &kp F5                    &kp F6  &kp F7  &kp F8  &kp F9   &kp F10
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &kp F11  &kp F12
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans   &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans          &trans  &trans   &trans
             >;
 
             sensor-bindings = <&re_kp C_VOLUME_DOWN C_VOLUME_UP>;
@@ -172,6 +170,17 @@
             >;
 
             sensor-bindings = <&inc_dec_kp RIGHT_ARROW LEFT_ARROW>;
+        };
+
+        NUMBERz {
+            bindings = <
+&kp N1  &kp N2  &kp N3   &kp N4        &kp N5                                &kp N6  &kp N7        &kp N8        &kp N9        &kp N0
+&kp N1  &kp N2  &kp N5   &kp N6        &kp KP_MINUS                          &kp N0  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp KP_MINUS
+&kp N1  &kp N1  &kp N2   &kp N3        &kp KP_PLUS                           &kp N0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_PLUS
+&kp N0  &kp N0  &kp DOT  &kp KP_EQUAL  &kp DOT       &kp KP_ENTER    &kp N0  &kp N0                &kp KP_DOT    &kp KP_EQUAL  &kp KP_ENTER
+            >;
+
+            sensor-bindings = <&inc_dec_kp DOWN_ARROW UP_ARROW>;
         };
     };
 };
