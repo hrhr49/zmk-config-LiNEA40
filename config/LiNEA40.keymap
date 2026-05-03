@@ -27,9 +27,9 @@
 //mouse scroll
 
 &msc {
-    delay-ms = <10>;
-    trigger-period-ms = <16>;
-    time-to-max-speed-ms = <300>;
+    delay-ms = <100>;
+    trigger-period-ms = <50>;
+    time-to-max-speed-ms = <500>;
     acceleration-exponent = <0>;
 };
 
@@ -71,7 +71,7 @@
         layers = <SCROLL>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,,
+            //スクロール方向を逆転,,,,,,,,,,,,,,,,,,,,,,
             <&zip_xy_to_scroll_mapper>;
     };
 };
